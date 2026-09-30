@@ -1,0 +1,1846 @@
+/* =========================
+   CONFIGURACIÓN GENERAL
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #050505;
+    color: white;
+}
+
+
+/* =========================
+   PANTALLA DE INICIO
+========================= */
+
+.inicio {
+    width: 100%;
+    min-height: 100vh;
+
+    background-image:
+    linear-gradient(rgba(0, 0, 0, 0.30), rgba(0, 0, 0, 0.30)),
+    url("assets/fondos/fondo (1).png");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.inicio-contenido {
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+}
+
+
+/* =========================
+   ZONA IZQUIERDA
+========================= */
+
+.inicio-logo {
+    position: absolute;
+
+    left: 50%;
+    top: 43%;
+
+    transform: translate(-50%, -50%);
+
+    width: 38%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.inicio-logo img {
+    width: 100%;
+    max-width: 650px;
+    height: auto;
+    object-fit: contain;
+}
+
+
+/* =========================
+   ZONA DERECHA
+========================= */
+
+.inicio-presentacion {
+    position: absolute;
+
+    left: 50%;
+    top: 67%;
+
+    transform: translate(-50%, -50%);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 0;
+}
+
+.inicio-frase {
+    max-width: 500px;
+
+    text-align: center;
+    line-height: 2;
+
+    font-size: 16px;
+    letter-spacing: 3px;
+
+    color: #bdbdbd;
+
+    margin-bottom: 40px;
+}
+
+
+/* =========================
+   BOTONES
+========================= */
+
+.inicio-botones {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    width: 260px;
+}
+
+.inicio-botones button {
+    width: 100%;
+
+    padding: 13px 25px;
+
+    border: none;
+    border-radius: 30px;
+
+    background: #eeeeee;
+    color: #111111;
+
+    font-size: 13px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.inicio-botones button:hover {
+    background: white;
+    transform: scale(1.04);
+}
+
+/* =========================
+   PANTALLA SOBRE MÍ
+========================= */
+
+.sobre-mi {
+    width: 100%;
+    min-height: 100vh;
+
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)),
+        url("assets/fondos/fondo (2).png");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    color: white;
+
+    padding: 80px;
+}
+
+/* =========================
+   MENÚ PRINCIPAL
+========================= */
+
+.menu-principal {
+    position: absolute;
+    top: 35px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    display: flex;
+    align-items: center;
+    gap: 35px;
+
+    z-index: 100;
+}
+
+.menu-principal button {
+    background: transparent;
+    color: #bdbdbd;
+
+    border: none;
+    padding: 8px 4px;
+
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.menu-principal button:hover {
+    color: white;
+}
+
+
+.sobre-mi-contenido {
+    width: 90%;
+    max-width: 1300px;
+    min-height: 80vh;
+
+    margin: 0 auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 80px;
+}
+
+.sobre-mi-texto {
+    width: 50%;
+    max-width: 600px;
+}
+
+.sobre-mi-texto h1 {
+    font-size: 52px;
+    font-weight: 700;
+    letter-spacing: 2px;
+
+    margin-bottom: 25px;
+}
+
+.sobre-mi-texto p {
+    font-size: 18px;
+    line-height: 1.7;
+
+    color: #d0d0d0;
+
+    margin-bottom: 18px;
+}
+
+.btn-presentaciones {
+    margin-top: 15px;
+
+    padding: 13px 35px;
+
+    background: transparent;
+    color: white;
+
+    border: 1px solid white;
+    border-radius: 30px;
+
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 1px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.btn-presentaciones:hover {
+    background: white;
+    color: black;
+}
+
+
+.sobre-mi-foto {
+    width: 45%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sobre-mi-foto img {
+    width: 100%;
+    max-width: 430px;
+    height: auto;
+    object-fit: contain;
+}
+
+
+
+
+/* =========================
+   CELULAR
+========================= */
+
+@media (max-width: 800px) {
+
+    .inicio-contenido {
+        grid-template-columns: 1fr;
+    }
+
+    .inicio-logo {
+        min-height: 45vh;
+        border-right: none;
+    }
+
+    .inicio-presentacion {
+        min-height: 55vh;
+        padding: 30px;
+    }
+
+    .inicio-logo img {
+        width: 75%;
+    }
+
+}
+
+/* =========================
+   ANIMACIONES SOBRE MÍ
+========================= */
+
+/* Texto entra desde la izquierda */
+@keyframes entrarIzquierda {
+
+    from {
+        opacity: 0;
+        transform: translateX(-60px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+/* Foto entra desde la derecha */
+@keyframes entrarDerecha {
+
+    from {
+        opacity: 0;
+        transform: translateX(60px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+/* Aplicamos las animaciones */
+
+.sobre-mi-texto {
+    animation: entrarIzquierda 0.8s ease-out;
+}
+
+.sobre-mi-foto {
+    animation: entrarDerecha 0.8s ease-out;
+}
+
+/* =========================
+   PANTALLA SERVICIOS
+========================= */
+
+.servicios {
+    width: 100%;
+    min-height: 100vh;
+
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)),
+        url("assets/fondos/fondo (2).png");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    color: white;
+    padding: 80px;
+}
+
+/* =========================
+   CONTENIDO DE SERVICIOS
+========================= */
+
+.servicios-contenido {
+    width: 90%;
+    max-width: 1200px;
+    margin: 70px auto 0;
+}
+
+.servicios-titulo {
+    margin-bottom: 45px;
+}
+
+.servicios-titulo h1 {
+    font-size: 48px;
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+}
+
+.servicios-titulo p {
+    color: #a8a8a8;
+    font-size: 16px;
+}
+
+
+/* LISTA */
+
+.servicios-lista {
+    width: 100%;
+}
+
+.servicio-item {
+    width: 100%;
+    min-height: 85px;
+
+    display: flex;
+    align-items: center;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.18);
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.servicio-item:last-child {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+
+/* NÚMEROS */
+
+.servicio-item span {
+    width: 80px;
+
+    font-size: 12px;
+    color: #777;
+}
+
+
+/* NOMBRE DEL SERVICIO */
+
+.servicio-item h2 {
+    font-size: 27px;
+    font-weight: 500;
+    letter-spacing: 1px;
+
+    transition: 0.3s;
+}
+
+
+/* EFECTO AL PASAR EL MOUSE */
+
+.servicio-item:hover {
+    padding-left: 15px;
+}
+
+.servicio-item:hover h2 {
+    color: white;
+    transform: translateX(8px);
+}
+
+/* =========================
+   TARJETAS VISUALES SERVICIOS
+========================= */
+
+.servicios-contenido {
+    width: 90%;
+    max-width: 1050px;
+    margin: 65px auto 0;
+}
+
+
+/* CUADRÍCULA */
+
+.servicios-lista {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 22px;
+}
+
+
+/* TARJETA */
+
+.servicio-item {
+    position: relative;
+
+    width: 100%;
+    height: 250px;
+    min-height: 0;
+
+    display: block;
+
+    overflow: hidden;
+
+    border: none;
+    padding: 0;
+
+    cursor: pointer;
+
+    background: #080808;
+}
+
+
+/* 3 TARJETAS ARRIBA */
+
+.servicio-item:nth-child(1),
+.servicio-item:nth-child(2),
+.servicio-item:nth-child(3) {
+    grid-column: span 2;
+}
+
+
+/* 2 TARJETAS ABAJO */
+
+.servicio-item:nth-child(4) {
+    grid-column: 2 / span 2;
+}
+
+.servicio-item:nth-child(5) {
+    grid-column: 4 / span 2;
+}
+
+
+/* IMAGEN */
+
+.servicio-item img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+    transition: transform 0.5s ease,
+                filter 0.5s ease;
+}
+
+
+/* OSCURECIDO */
+
+.servicio-item::after {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    background: linear-gradient(
+        to top,
+        rgba(0,0,0,0.85),
+        rgba(0,0,0,0.05) 65%
+    );
+
+    pointer-events: none;
+}
+
+
+/* OCULTAMOS LOS NÚMEROS */
+
+.servicio-item span {
+    display: none;
+}
+
+
+/* TÍTULO SOBRE LA IMAGEN */
+
+.servicio-item h2 {
+    position: absolute;
+
+    left: 22px;
+    bottom: 20px;
+
+    z-index: 2;
+
+    font-size: 17px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+
+    margin: 0;
+
+    transition: transform 0.4s ease;
+}
+
+
+/* HOVER */
+
+.servicio-item:hover {
+    padding-left: 0;
+}
+
+.servicio-item:hover img {
+    transform: scale(1.06);
+    filter: brightness(1.15);
+}
+
+.servicio-item:hover h2 {
+    transform: translateY(-5px);
+}
+
+/* =========================
+   AJUSTE FINAL SERVICIOS
+========================= */
+
+.servicios-contenido {
+    width: 90%;
+    max-width: 1100px;
+    margin: 70px auto 0;
+}
+
+.servicios-titulo {
+    margin-bottom: 50px;
+}
+
+.servicios-titulo h1 {
+    font-size: 46px;
+    margin-bottom: 10px;
+}
+
+.servicios-titulo p {
+    font-size: 15px;
+    color: #aaaaaa;
+}
+
+
+/* DISTRIBUCIÓN DE TARJETAS */
+
+.servicios-lista {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 25px;
+}
+
+
+/* TAMAÑO */
+
+.servicio-item {
+    height: 265px;
+}
+
+
+/* TÍTULOS */
+
+.servicio-item h2 {
+    left: 20px;
+    bottom: 18px;
+
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 0.4px;
+}
+
+
+/* HOVER MÁS ELEGANTE */
+
+.servicio-item img {
+    filter: brightness(0.85);
+    transition:
+        transform 0.6s ease,
+        filter 0.6s ease;
+}
+
+.servicio-item:hover img {
+    transform: scale(1.07);
+    filter: brightness(1.05);
+}
+
+.servicio-item:hover h2 {
+    transform: translateY(-5px);
+}
+
+/* =========================
+   FLECHA TARJETAS SERVICIOS
+========================= */
+
+.servicio-item::before {
+    content: "→";
+
+    position: absolute;
+    right: 20px;
+    bottom: 16px;
+
+    z-index: 3;
+
+    font-size: 25px;
+    font-weight: 300;
+    color: white;
+
+    opacity: 0;
+    transform: translateX(-10px);
+
+    transition:
+        opacity 0.35s ease,
+        transform 0.35s ease;
+}
+
+.servicio-item:hover::before {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* =========================
+   TRANSICIÓN ENTRE PANTALLAS
+========================= */
+
+@keyframes entradaPantalla {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* SOBRE MÍ */
+.sobre-mi {
+    animation: entradaPantalla 0.5s ease;
+}
+
+/* SERVICIOS */
+.servicios {
+    animation: entradaPantalla 0.5s ease;
+}
+
+/* =========================
+   PRODUCCIÓN AUDIOVISUAL
+========================= */
+
+.produccion-audiovisual {
+    width: 100%;
+    min-height: 100vh;
+
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)),
+        url("assets/fondos/fondo (2).png");
+
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+    color: white;
+
+    padding: 80px 0;
+
+    animation: entradaPantalla 0.5s ease;
+}
+
+
+.produccion-contenido {
+    width: 90%;
+    max-width: 1200px;
+
+    margin: 60px auto 0;
+}
+
+
+/* TÍTULO PRINCIPAL */
+
+.produccion-titulo {
+    margin-bottom: 45px;
+}
+
+.produccion-titulo h1 {
+    font-size: 46px;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.produccion-titulo p {
+    font-size: 15px;
+    color: #aaaaaa;
+}
+
+
+/* CONTENEDOR DE LOS GIF */
+
+.produccion-gifs {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 35px;
+}
+
+
+/* CADA GIF */
+
+.produccion-gifs img {
+    width: 100%;
+    height: auto;
+
+    display: block;
+
+    object-fit: contain;
+}
+
+/* =====================================
+   CORRECCIÓN SERVICIOS
+===================================== */
+
+.servicios .servicios-contenido {
+    width: 90%;
+    max-width: 1100px;
+    margin: 70px auto 0;
+}
+
+.servicios .servicios-lista {
+    width: 100%;
+
+    display: grid;
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+
+    gap: 25px;
+}
+
+.servicios .servicio-item {
+    width: 100%;
+    height: 265px;
+    min-width: 0;
+
+    display: block;
+    position: relative;
+
+    padding: 0;
+    margin: 0;
+
+    overflow: hidden;
+}
+
+.servicios .servicio-item:nth-child(1),
+.servicios .servicio-item:nth-child(2),
+.servicios .servicio-item:nth-child(3) {
+    grid-column: span 2;
+}
+
+.servicios .servicio-item:nth-child(4) {
+    grid-column: 2 / span 2;
+}
+
+.servicios .servicio-item:nth-child(5) {
+    grid-column: 4 / span 2;
+}
+
+.servicios .servicio-item img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+    object-fit: cover;
+}
+
+.servicios .servicio-item span {
+    display: none;
+}
+
+/* =========================
+   REDES SOCIALES
+========================= */
+
+.redes-sociales {
+    width: 100%;
+    min-height: 100vh;
+
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)),
+        url("assets/fondos/fondo (2).png");
+
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+    color: white;
+    padding: 80px 0;
+}
+
+
+/* CONTENIDO GENERAL */
+
+.redes-contenido {
+    width: 90%;
+    max-width: 1200px;
+
+    margin: 60px auto 0;
+}
+
+
+/* TÍTULO */
+
+.redes-titulo {
+    margin-bottom: 45px;
+}
+
+.redes-titulo h1 {
+    font-size: 46px;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.redes-titulo p {
+    font-size: 15px;
+    color: #aaaaaa;
+}
+
+
+/* CAMPAÑAS */
+
+.redes-campanas {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 45px;
+}
+
+
+/* IMÁGENES */
+
+.redes-campanas img {
+    width: 100%;
+    max-width: 1100px;
+
+    height: auto;
+
+    display: block;
+}
+/* =========================
+   ANIMACIÓN REDES SOCIALES
+========================= */
+
+.redes-titulo {
+    animation: redesTituloEntrada 0.8s ease forwards;
+}
+
+.redes-campanas img {
+    opacity: 0;
+    animation: redesCampanaEntrada 0.9s ease forwards;
+}
+
+.redes-campanas img:nth-child(1) {
+    animation-delay: 0.15s;
+}
+
+.redes-campanas img:nth-child(2) {
+    animation-delay: 0.35s;
+}
+
+
+/* TÍTULO */
+
+@keyframes redesTituloEntrada {
+
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* CAMPAÑAS */
+
+@keyframes redesCampanaEntrada {
+
+    from {
+        opacity: 0;
+        transform: translateY(35px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* =========================
+   EDICIÓN PARA CREADORES
+========================= */
+
+.edicion-creadores {
+    width: 100%;
+    min-height: 100vh;
+
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)),
+        url("assets/fondos/fondo (2).png");
+
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+    color: white;
+    padding: 80px 0;
+}
+
+
+/* CONTENIDO */
+
+.edicion-contenido {
+    width: 90%;
+    max-width: 1200px;
+    margin: 60px auto 0;
+}
+
+
+/* TÍTULO PRINCIPAL */
+
+.edicion-titulo {
+    margin-bottom: 45px;
+}
+
+.edicion-titulo h1 {
+    font-size: 46px;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.edicion-titulo p {
+    font-size: 15px;
+    color: #aaaaaa;
+}
+
+
+/* PROYECTOS */
+
+.edicion-gifs {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 55px;
+}
+
+
+/* CADA CATEGORÍA */
+
+.edicion-proyecto {
+    width: 100%;
+}
+
+.edicion-proyecto h2 {
+    font-size: 18px;
+    letter-spacing: 1px;
+    margin-bottom: 12px;
+}
+
+
+/* GIF */
+
+.edicion-proyecto img {
+    width: 100%;
+    max-width: 1200px;
+    height: auto;
+    display: block;
+}
+
+/* =========================
+   ANIMACIÓN EDICIÓN PARA CREADORES
+========================= */
+
+.edicion-titulo {
+    animation: edicionTituloEntrada 0.8s ease forwards;
+}
+
+.edicion-proyecto {
+    opacity: 0;
+    animation: edicionProyectoEntrada 0.9s ease forwards;
+}
+
+.edicion-proyecto:nth-child(1) {
+    animation-delay: 0.15s;
+}
+
+.edicion-proyecto:nth-child(2) {
+    animation-delay: 0.30s;
+}
+
+.edicion-proyecto:nth-child(3) {
+    animation-delay: 0.45s;
+}
+
+@keyframes edicionTituloEntrada {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes edicionProyectoEntrada {
+    from {
+        opacity: 0;
+        transform: translateY(35px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* =========================
+   FOTOGRAFÍA
+========================= */
+
+.fotografia {
+    width: 100%;
+    min-height: 100vh;
+
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)),
+        url("assets/fondos/fondo (2).png");
+
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+    color: white;
+    padding: 80px 0;
+}
+
+.fotografia-contenido {
+    width: 90%;
+    max-width: 1200px;
+    margin: 60px auto 0;
+}
+
+.fotografia-titulo {
+    margin-bottom: 55px;
+}
+
+.fotografia-titulo h1 {
+    font-size: 46px;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.fotografia-titulo p {
+    font-size: 15px;
+    color: #aaaaaa;
+}
+
+
+/* CATEGORÍAS */
+
+.foto-categoria {
+    margin-bottom: 45px;
+}
+
+.foto-categoria h2 {
+    font-size: 20px;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+
+/* GALERÍA */
+
+.foto-galeria {
+    column-count: 3;
+    column-gap: 12px;
+}
+
+.foto-galeria img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 12px;
+    break-inside: avoid;
+
+    transition: transform 0.4s ease,
+                opacity 0.4s ease;
+}
+
+
+
+/* EFECTO AL PASAR EL MOUSE */
+
+.foto-galeria img:hover {
+    transform: scale(1.025);
+    opacity: 0.9;
+}
+
+/* ESPACIO Y TÍTULOS DE FOTOGRAFÍA */
+
+.foto-categoria {
+    margin-bottom: 90px;
+}
+
+.foto-categoria h2 {
+    font-size: 40px;
+    font-weight: 800;
+    letter-spacing: 5px;
+    margin-bottom: 40px;
+    color: white;
+}
+
+/* SEPARACIÓN ENTRE GALERÍA Y SIGUIENTE CATEGORÍA */
+.foto-galeria {
+    margin-bottom: 80px;
+}
+
+/* =========================
+   ANIMACIÓN FOTOGRAFÍA
+========================= */
+
+.fotografia-titulo {
+    animation: fotoEntrada 0.7s ease forwards;
+}
+
+.foto-categoria {
+    opacity: 0;
+    transform: translateY(25px);
+    animation: fotoEntrada 0.8s ease forwards;
+}
+
+.foto-categoria:nth-of-type(2) {
+    animation-delay: 0.15s;
+}
+
+.foto-categoria:nth-of-type(3) {
+    animation-delay: 0.30s;
+}
+
+.foto-categoria:nth-of-type(4) {
+    animation-delay: 0.45s;
+}
+
+@keyframes fotoEntrada {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* =========================
+   BRANDING
+========================= */
+
+.branding {
+    width: 100%;
+    min-height: 100vh;
+
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.20), rgba(0, 0, 0, 0.20)),
+        url("assets/fondos/fondo (2).png");
+
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+    color: white;
+    padding: 80px 0;
+}
+
+.branding-contenido {
+    width: 90%;
+    max-width: 1200px;
+    margin: 60px auto 0;
+}
+
+.branding-titulo {
+    margin-bottom: 50px;
+}
+
+.branding-titulo h1 {
+    font-size: 46px;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.branding-titulo p {
+    font-size: 15px;
+    color: #aaaaaa;
+}
+
+.branding-proyectos {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 70px;
+}
+
+.branding-proyectos img {
+    width: 100%;
+    max-width: 1100px;
+    height: auto;
+    display: block;
+}
+
+/* =========================
+   EFECTOS BRANDING
+========================= */
+
+.branding-proyectos img {
+    opacity: 0;
+    transform: translateY(35px);
+    animation: aparecerBranding 0.8s ease forwards;
+
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+/* Entrada escalonada */
+.branding-proyectos img:nth-child(1) {
+    animation-delay: 0.15s;
+}
+
+.branding-proyectos img:nth-child(2) {
+    animation-delay: 0.30s;
+}
+
+.branding-proyectos img:nth-child(3) {
+    animation-delay: 0.45s;
+}
+
+.branding-proyectos img:nth-child(4) {
+    animation-delay: 0.60s;
+}
+
+/* Movimiento suave al pasar el mouse */
+.branding-proyectos img:hover {
+    transform: translateY(-6px) scale(1.01);
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.35);
+}
+
+@keyframes aparecerBranding {
+    from {
+        opacity: 0;
+        transform: translateY(35px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* =========================
+   ALL
+========================= */
+
+.all {
+    width: 100%;
+    min-height: 100vh;
+
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)),
+        url("assets/fondos/fondo (2).png");
+
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+    color: white;
+    padding: 80px 0;
+}
+
+.all-contenido {
+    width: 90%;
+    max-width: 1200px;
+    margin: 60px auto 0;
+}
+
+.all-titulo {
+    margin-bottom: 70px;
+}
+
+.all-titulo h1 {
+    font-size: 46px;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.all-titulo p {
+    font-size: 15px;
+    color: #aaaaaa;
+}
+
+/* CATEGORÍAS */
+
+.all-categoria {
+    width: 100%;
+    margin-bottom: 90px;
+}
+
+.all-categoria h2 {
+    font-size: 24px;
+    letter-spacing: 1.5px;
+    margin-bottom: 30px;
+    font-weight: 500;
+}
+
+/* =========================
+   ALL - VIDEOS VERTICALES
+========================= */
+
+.all-videos-verticales {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 25px;
+    align-items: start;
+}
+
+.all-videos-verticales video {
+    width: 100%;
+    aspect-ratio: 9 / 16;
+    object-fit: cover;
+
+    background: #000;
+    border-radius: 8px;
+
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+.all-videos-verticales video:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 18px 35px rgba(0, 0, 0, 0.45);
+}
+
+/* =========================
+   ALL - RESPONSIVE
+========================= */
+
+/* TABLET */
+@media (max-width: 900px) {
+
+    .all-videos-verticales {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 18px;
+    }
+
+}
+
+/* CELULAR */
+@media (max-width: 600px) {
+
+    .all-contenido {
+        width: 92%;
+        margin-top: 45px;
+    }
+
+    .all-titulo h1 {
+        font-size: 36px;
+    }
+
+    .all-categoria {
+        margin-bottom: 65px;
+    }
+
+    .all-categoria h2 {
+        font-size: 18px;
+        margin-bottom: 20px;
+    }
+
+    .all-videos-verticales {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+
+}
+
+/* =========================
+   SOBRE MÍ - CELULAR
+========================= */
+
+@media (max-width: 600px) {
+
+    .sobre-mi {
+        min-height: 100vh;
+        padding: 90px 25px 40px;
+    }
+
+    .sobre-mi-contenido {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 35px;
+    }
+
+    .sobre-mi-texto {
+        width: 100%;
+        max-width: none;
+    }
+
+    .sobre-mi-texto h1 {
+        font-size: 42px;
+        line-height: 1;
+        margin-bottom: 25px;
+    }
+
+    .sobre-mi-texto p {
+        width: 100%;
+        font-size: 16px;
+        line-height: 1.6;
+    }
+
+    .sobre-mi-foto {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .sobre-mi-foto img {
+        width: 75%;
+        max-width: 280px;
+        height: auto;
+    }
+}
+
+/* =========================
+   SERVICIOS - CELULAR
+========================= */
+
+@media (max-width: 600px) {
+
+    .servicios {
+        min-height: 100vh;
+        padding: 90px 0 50px;
+    }
+
+    .servicios .servicios-contenido {
+        width: 88%;
+        margin: 50px auto 0;
+    }
+
+    .servicios-titulo h1 {
+        font-size: 38px;
+    }
+
+    .servicios-titulo p {
+        font-size: 14px;
+        line-height: 1.5;
+    }
+
+    .servicios .servicios-lista {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .servicios .servicio-item {
+        width: 100%;
+        height: 190px;
+    }
+}
+
+/* =========================
+   EDICIÓN PARA CREADORES - CELULAR
+========================= */
+
+@media (max-width: 600px) {
+
+    .edicion-creadores {
+        min-height: 100vh;
+        padding: 90px 0 50px;
+    }
+
+    .edicion-contenido {
+        width: 90%;
+        margin: 45px auto 0;
+    }
+
+    .edicion-titulo h1 {
+        font-size: 36px;
+        line-height: 1.08;
+        margin-bottom: 12px;
+    }
+
+    .edicion-titulo p {
+        font-size: 14px;
+        line-height: 1.4;
+    }
+}
+
+/* =========================
+   FOTOGRAFÍA - CELULAR
+========================= */
+
+@media (max-width: 600px) {
+
+    .fotografia {
+        padding-top: 90px;
+    }
+
+    .fotografia-contenido {
+        width: 90%;
+        margin: 45px auto 0;
+    }
+
+    .fotografia-titulo h1 {
+        font-size: 36px;
+        line-height: 1.05;
+    }
+
+    .foto-categoria h2 {
+        font-size: 26px;
+        line-height: 1.1;
+        margin-bottom: 25px;
+    }
+
+    .foto-categoria {
+        margin-bottom: 60px;
+    }
+}
+
+/* =========================
+   BOTÓN VER MÁS
+========================= */
+
+.produccion-proyecto {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.produccion-proyecto img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.btn-ver-mas {
+    margin-top: 18px;
+    padding: 10px 28px;
+
+    background: transparent;
+    color: #ffffff;
+
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    border-radius: 30px;
+
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+
+    cursor: pointer;
+
+    transition:
+        background 0.3s ease,
+        color 0.3s ease,
+        transform 0.3s ease;
+}
+
+.btn-ver-mas:hover {
+    background: #ffffff;
+    color: #111111;
+    transform: translateY(-2px);
+}
+
+/* VER MÁS - EDICIÓN PARA CREADORES */
+
+.edicion-proyecto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.edicion-proyecto .btn-ver-mas {
+    margin-top: 18px;
+}
+
+/* =========================
+   ANIMACIÓN DE ENTRADA - SERVICIOS
+========================= */
+
+.servicios-contenido {
+    animation: entradaSuave 0.7s ease-out;
+}
+
+@keyframes entradaSuave {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* =========================
+   ANIMACIÓN DE ENTRADA - SOBRE MÍ
+========================= */
+
+.sobre-mi-contenido {
+    animation: entradaSuave 0.7s ease-out;
+}
+
+/* =========================
+   ANIMACIÓN DE ENTRADA - ALL
+========================= */
+
+.all-contenido {
+    animation: entradaSuave 0.7s ease-out;
+}
+
+/* =========================
+   HOVER - TARJETAS DE SERVICIOS
+========================= */
+
+.servicios .servicio-item {
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+.servicios .servicio-item:hover {
+    transform: translateY(-6px) scale(1.015);
+    box-shadow: 0 18px 35px rgba(0, 0, 0, 0.35);
+}
+
+/* =========================
+   HOVER - MENÚ PRINCIPAL
+========================= */
+
+.menu-principal button {
+    position: relative;
+}
+
+.menu-principal button::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 2px;
+    width: 0;
+    height: 1px;
+    background: #ffffff;
+    transform: translateX(-50%);
+    transition: width 0.3s ease;
+}
+
+.menu-principal button:hover::after {
+    width: 100%;
+}
+
+/* =========================
+   REDES - SOBRE MÍ
+========================= */
+
+.sobre-mi-foto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.redes-sociales-perfil {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 18px;
+    margin-top: 20px;
+}
+
+.redes-sociales-perfil img {
+    width: 58px;
+    height: 58px;
+    object-fit: cover;
+    border-radius: 12px;
+    cursor: pointer;
+    transition:
+        transform 0.3s ease,
+        filter 0.3s ease;
+}
+
+.redes-sociales-perfil img:hover {
+    transform: translateY(-4px) scale(1.08);
+    filter: brightness(1.15);
+}
+
+/* =========================
+   CIERRE / CONTACTO - ALL
+========================= */
+
+.all-contacto {
+    width: 100%;
+    text-align: center;
+    padding: 80px 20px 100px;
+    margin-top: 30px;
+}
+
+.all-contacto h2 {
+    font-size: 36px;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+    color: #ffffff;
+}
+
+.all-contacto p {
+    max-width: 650px;
+    margin: 0 auto 30px;
+    font-size: 15px;
+    line-height: 1.6;
+    color: #aaaaaa;
+}
+
+.btn-hablemos {
+    display: inline-block;
+    padding: 12px 32px;
+
+    border: 1px solid rgba(255, 255, 255, 0.75);
+    border-radius: 30px;
+
+    color: #ffffff;
+    text-decoration: none;
+
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+
+    transition:
+        background 0.3s ease,
+        color 0.3s ease,
+        transform 0.3s ease;
+}
+
+.btn-hablemos:hover {
+    background: #ffffff;
+    color: #111111;
+    transform: translateY(-3px);
+}
+
+
+
