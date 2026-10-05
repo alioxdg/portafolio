@@ -34,6 +34,7 @@ botonInicio.addEventListener("click", function () {
 const servicios = document.querySelector("#servicios");
 const botonServiciosInicio = document.querySelector("#btn-servicios");
 const botonEdicionVideosInicio = document.querySelector("#btn-edicion-videos");
+const botonEdicionVideosSobreMi = document.querySelector("#btn-edicion-videos-sobre-mi");
 const botonServiciosMenu = document.querySelector("#menu-servicios");
 
 // Al comenzar, ocultamos SERVICIOS
@@ -424,6 +425,26 @@ brandingMenuServicios.addEventListener("click", function () {
 const all = document.querySelector("#all");
 
 botonEdicionVideosInicio.addEventListener("click", function () {
+
+    inicio.style.display = "none";
+    sobreMi.style.display = "none";
+    servicios.style.display = "none";
+    produccionAudiovisual.style.display = "none";
+    redesSociales.style.display = "none";
+    edicionCreadores.style.display = "none";
+    branding.style.display = "none";
+    fotografia.style.display = "none";
+
+    all.style.display = "block";
+
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+
+});
+
+botonEdicionVideosSobreMi.addEventListener("click", function () {
 
     inicio.style.display = "none";
     sobreMi.style.display = "none";
